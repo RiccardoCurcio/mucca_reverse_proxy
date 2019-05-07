@@ -6,10 +6,10 @@ RUN rm -rf /etc/nginx/conf.d
 
 COPY conf /etc/nginx
 
-RUN mkdir /etc/certificato
+RUN mkdir /etc/cert
 
-COPY ./certificato/localhost.crt /etc/certificato/localhost.crt
-COPY ./certificato/localhost.key /etc/certificato/localhost.key
+COPY ./cert/localhost.crt /etc/cert/localhost.crt
+COPY ./cert/localhost.key /etc/cert/localhost.key
 
 EXPOSE 80
 
