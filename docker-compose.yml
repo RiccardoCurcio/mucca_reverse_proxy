@@ -5,8 +5,7 @@ services:
     image: nginx:reverse
     container_name: {{SERVICENAME}}
     ports:
-      - "{{PROXYPORT}}:80"
-      - "{{PROXYSSLPORT}}:443"
+      {{PORTCONFIG}}
     networks:
       - {{APPLICATIONNETWORK}}
 
