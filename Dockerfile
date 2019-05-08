@@ -8,8 +8,8 @@ COPY conf /etc/nginx
 
 RUN mkdir /etc/cert
 
-COPY ./cert/localhost.crt /etc/cert/{{CTR}}
-COPY ./cert/localhost.key /etc/cert/{{KEY}}
+COPY ./cert/{{CTR}} /etc/cert/{{CTR}}
+COPY ./cert/{{KEY}} /etc/cert/{{KEY}}
 
 EXPOSE {{PROXYPORT}}
 
