@@ -3,13 +3,13 @@ services:
   nginx-reverse:
     build: .
     image: nginx:reverse
-    container_name: mucca-reverse-proxy
+    container_name: {{SERVICENAME}}
     ports:
-      - "80:80"
-      - "443:443"
+      - "{{PROXYPORT}}:80"
+      - "{{PROXYSSLPORT}}:443"
     networks:
-      - reverse-network
+      - {{APPLICATIONNETWORK}}
 
 networks:
-  reverse-network:
+  {{APPLICATIONNETWORK}}:
     external: true

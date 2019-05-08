@@ -8,9 +8,9 @@ COPY conf /etc/nginx
 
 RUN mkdir /etc/cert
 
-COPY ./cert/localhost.crt /etc/cert/localhost.crt
-COPY ./cert/localhost.key /etc/cert/localhost.key
+COPY ./cert/localhost.crt /etc/cert/{{CTR}}
+COPY ./cert/localhost.key /etc/cert/{{KEY}}
 
-EXPOSE 80
+EXPOSE {{PROXYPORT}}
 
 CMD ["nginx", "-g", "daemon off;"]
