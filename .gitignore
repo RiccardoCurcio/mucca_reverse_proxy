@@ -1,2 +1,2 @@
-cert/*
-conf/conf.d/*
+cert/
+conf/conf.d/
