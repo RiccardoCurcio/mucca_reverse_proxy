@@ -13,6 +13,6 @@ RUN mkdir /etc/cert
 
 {{CERTCOPYCMD}}
 
-EXPOSE {{PROXYPORT}}
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
